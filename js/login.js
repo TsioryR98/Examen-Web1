@@ -6,7 +6,8 @@ window.addEventListener("DOMContentLoaded", function(){
     const _login1 = "tsioryR";
     const _login2 = "azerty01";
 
-    valide.addEventListener('click',() => {
+    valide.addEventListener('click',(e) => {
+        e.preventDefault(); /*allow to load my page instead*/
         if (email.value != _login1 || passwords.value != _login2) {
             error.style.display = "block";
         } else {
