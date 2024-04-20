@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+:root{
+    font-size: 16px;
+    --primary-color: #0d7cc6;
+    --secondary-color: #f68712;
+    --tertiary-color: #90c2e6;
+    --white1: #dbdada;
+    --black: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+
+}
+body{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login_side_1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white;
+}
+.login_side_1 h1{
+    margin-top: 25vh;
+    font-size: 2.65rem;
+    margin-bottom: 5vh;
+    color:var(--black);
+    
+}
+.login_side_1 p{
+   align-items: center;
+   text-align: center;
+   margin-bottom: 5vh;
+   color:var(--black);
+   font-weight: 400;
+}
+.login_side_1 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input_case{
+    position: relative;
+}
+.input_case input {
+    text-indent: 3vw; /*starts writting at the begining of placeholder*/
+    padding-left: 0;
+    font-size: 1.03rem;
+}
+.input_case input::placeholder {
+    text-indent: 3vw; 
+    font-size: 1.03rem;
+}
+.input_case input[type = "password"] {
+    font-size: 2rem;
+}
+form div i {
+    position: absolute;
+    font-size: 1.65rem;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+input[type="text"],
+input[type="password"] {
+    width: 26vw;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 4vh; 
+    border: none;
+    border-radius: 4px;
+    background-color: var(--white1);
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 12vw; 
+    padding: 8px; 
+    border: none;
+    background-color: var(--primary-color);
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 4px;
+}
+
+#error_message{
+    display: none;
+    border: 1px solid black ;
+    height: 5vh;
+    width: 20vw;
+    background-color: red;
+    margin-top: 4vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#error_message p{
+    margin-top: 3px;
+    margin-left: 3vw;
+    text-align: center;
+    color : var(--white1);
+    font-weight: lighter;
+}
+
+#error_message{
+    position: relative;
+}
+#error_message i {
+    position: absolute;
+    margin-left: 2vw;
+    margin-top: 5px;
+    color:var(--white1);
+}
+.login_side_2{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+.img_side_2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/loginBackgroud.png');
+    background-size: cover;
+    background-position: 100% 49%;
+}
+.img1_side_2{
+    position: absolute;
+    width: 100%;
+    height: 78%;
+    top: 19vh;
+    left: 0;
+    background: url('../img/loginImage.png');
+    background-size: cover;
+    background-position: center;
+    animation: moveImg 2s infinite ease-out;
+}
+.img2_side_2 {
+    position: absolute;
+    width: 26%;
+    height: 24%;
+    top: 7vh;
+    left: 20vw;
+    background: url('../img/plane.png');
+    background-size: cover;
+    background-position: center;
+    animation: scaleImg 4s infinite linear;
+}
+
+@keyframes moveImg {
+    0% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(7px); 
+    }
+    100% { 
+        transform: translateY(0); 
+    }
+}
+@keyframes scaleImg {
+    0% {
+        transform: scale(0);
+    }
+    5% {
+        transform: scale(0.1);
+    }
+    15% {
+        transform: scale(0.2);
+    }
+    25% {
+        transform: scale(0.3);
+    }
+    35% {
+        transform: scale(0.4);
+    }
+    45% {
+        transform: scale(0.5);
+    }
+    55% {
+        transform: scale(0.6);
+    }
+    65% {
+        transform: scale(0.7);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+    85% {
+        transform: scale(0.9);
+    }
+    95% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
