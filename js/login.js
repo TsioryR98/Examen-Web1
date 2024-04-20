@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function(){
         if (email.value != _login1 || passwords.value != _login2) {
             error.style.display = "block";
         } else {
-            alert("hello")
+            window.location.href = "index.html";
         }
     }
 )
