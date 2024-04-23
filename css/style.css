@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 :root{
     font-size: 16px;
     --primary-color: #0d7cc6;
     --secondary-color: #f68712;
     --tertiary-color: #90c2e6;
+    --white2: #e2eef9;
     --white1: #f2f2ff;
     --black: #010101;
 }
@@ -19,11 +21,11 @@ body{
     padding: 0;
 }
 .landing_page{
-    margin: 0;
-    padding: 0;
     position: relative;
     height: 100vh;
-    width: 100%; 
+    width: 98%; 
+    margin-right: 1vw;
+    margin-left: 1vw;
 
 }
 .landing_page_1{
@@ -71,7 +73,7 @@ nav ul {
     border-radius: 5px;
     margin: 0;
     padding: 0;
-    margin-left: 20vw;
+    margin-left: 16vw;
     margin-right: 2vw;
     
 }
@@ -108,7 +110,7 @@ nav input[type="submit"] {
     align-items: center;
     display: flex;
     justify-content: center; 
-    margin-left: 18vw;
+    margin-left: 20vw;
     
 }
 
@@ -171,7 +173,7 @@ nav input[type="submit"]:hover {
     position: absolute;
     height: 98vh;
     width: 50%;
-    background-color: var(--tertiary-color);
+    background-color: var(--white2);
     z-index: 1;
     border-radius: 0 10px 10px 0;
     margin: 0;
@@ -180,17 +182,94 @@ nav input[type="submit"]:hover {
     right: 0;
     top: 0;
 }
+.rating {
+    display: flex;
+    background-color: #f68712;
+    border-radius: 50%;
+    position: absolute;
+    width: 1.55rem;
+    height: 1.55rem;
+    top: 29vh;
+    left: 10vw;
+    z-index: 2;
+    border: #010101 solid 1px; 
+    align-items: center;
+}
+.rating span{
+    margin-left: 10px;
+}
+.star {
+    font-size: 1.25rem; 
+    color: #000000; /* color */
+    text-align: center;
+}
+
+
+
+.arrow img{
+    position: absolute;
+    width: 20%;
+    height: 22%;
+    top: 28vh;
+    left: 30vw;
+    z-index: 2;
+}
+.around{
+    position: absolute;
+    background-color: var(--tertiary-color);
+    width: 60%;
+    height: 72%;
+    top: 27vh;
+    left:9vw;
+    border-radius: 44% 40% 0 58%;
+    z-index: 1;
+   
+}
 
 .img1_side_2{
     position: absolute;
-    width: 52%;
-    height: 67%;
-    top: 32vh;
+    width: 60%;
+    height: 70%;
+    top: 29vh;
     left:12vw;
     background: url('../img/girlTravel.png');
     background-size: cover;
     background-position: center;
+    z-index: 1;
+
+
 }
-.img2_side_2{
-    
+
+.recommand_page {
+    display: flex;
 }
+
+.recommand_img {
+    width: 35%;
+    justify-content: space-between;
+    height: 75vh;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+.image_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.50rem;
+}
+
+.image_group img {
+    width: calc(39% - 10px);
+    margin-bottom: 10px; 
+    height: 11rem; 
+    border-radius: 10%;
+}
+
+.image_group .group2{
+    transform: scale(1.15);
+}
+
+
+
+
+
