@@ -5,13 +5,11 @@
     --primary-color: #0d7cc6;
     --secondary-color: #f68712;
     --tertiary-color: #90c2e6;
-    --white1: #dbdada;
+    --white1: #f2f2ff;
     --black: #010101;
 }
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 
@@ -21,35 +19,46 @@ body{
     padding: 0;
 }
 .landing_page{
-    top:0;
+    margin: 0;
+    padding: 0;
     position: relative;
     height: 100vh;
-    width: 100%;
-    background-color: white;
+    width: 100%; 
+
 }
 .landing_page_1{
-    position: absolute;
     height: 98vh;
-    width: 98vw;
-    margin-top: 1vh;
-    margin-left: 1vw;
-    margin-right: 2vw;
+    margin-top: 2vh;
     background-color:var(--white1);
     border-radius: 20px;
     padding: 20px; 
+    display: flex;
+    width: 100%;
+    
 }
 
-nav{
-    
+nav {
+    display: flex;
+    align-items: center;
     background-color: white;
+    height: 12vh;
     width: 100%;
-    height: 10vh;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    cursor: pointer;
     border-radius: 10px;
- 
+    z-index: 2;
+    margin: 0;
+}
+
+nav span{
+    font-weight: bold; 
+    color: var(--primary-color);
+    font-size: 1.65rem
+}
+
+nav img{
+    width: 60px;
+    height: 60px;
+    margin-left: 2vw;
+
 }
 nav ul {
     list-style: none;
@@ -57,15 +66,20 @@ nav ul {
     justify-content: center;
     gap: 5px;
     align-items: center;
-    width: 100%; /* la largeur pour centrer */
+    width: 100%; 
     height: 100%;
-    padding: 0 20px;
     border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20vw;
+    margin-right: 2vw;
+    
 }
 
 nav ul li {
     text-align: center;
-    width: 8%; 
+    padding: 0;
+ 
 }
 
 nav ul li a {
@@ -73,13 +87,15 @@ nav ul li a {
     font-size: 0.95rem;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px; /
+   
 }
-.logout{
+nav input {
     display: flex;
-    position: absolute;
     float: right;
+
 }
-input[type="submit"] {
+nav input[type="submit"] {
     width: 8vw; 
     padding: 8px; 
     border: none;
@@ -89,10 +105,92 @@ input[type="submit"] {
     font-weight: lighter;
     font-size: 0.95rem;
     border-radius: 4px;
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    margin-left: 18vw;
+    
 }
 
-.log_out{
+nav input[type="submit"] {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
+nav input[type="submit"]:hover {
+    opacity: 0.7; 
+}
+
+.landing_text{
+    position: absolute;
+    height: 98vh;
+    width: 50%;
+    top: 0; 
+    bottom: 0; 
+    width: 50%; 
+    background-color: var(--white1);
+    left: 0;
+    z-index: 1;
+    border-radius: 10px 0 0 10px;
+    margin: 0;
+    justify-content: center;
     display: flex;
-    float: right;
-    text-align: center;
+    flex-direction: column;
+    padding-left: 2vw;
+}
+
+.landing_text h1{
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.65rem;
+    margin-bottom: 3vh;
+
+}
+.landing_text p{
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 10vh;
+}
+
+.landing_text input[type="submit"] {
+    width: 8vw; 
+    padding: 8px; 
+    border: none;
+    background-color: var(--primary-color);
+    outline: none;
+    color: white;
+    font-weight: lighter;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+}
+
+.landing_img{
+    position: absolute;
+    height: 98vh;
+    width: 50%;
+    background-color: var(--tertiary-color);
+    z-index: 1;
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    right: 0;
+    top: 0;
+}
+
+.img1_side_2{
+    position: absolute;
+    width: 52%;
+    height: 67%;
+    top: 32vh;
+    left:12vw;
+    background: url('../img/girlTravel.png');
+    background-size: cover;
+    background-position: center;
+}
+.img2_side_2{
+    
 }
