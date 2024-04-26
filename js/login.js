@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function(){
         e.preventDefault(); /*allow to load my page instead*/
         if (email.value != _login1 || passwords.value != _login2) {
             error.style.display = "block";
+            //toggle need to swift
         } else {
             window.location.href = "index.html";
         }
