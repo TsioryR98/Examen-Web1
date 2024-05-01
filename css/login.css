@@ -137,35 +137,36 @@ input[type="submit"] {
     animation: scaleImg 4s infinite linear;
 }
 
-#error_message{
+#error_message {
     display: none;
-    border: 1px solid black ;
+    border: 1px solid black;
     height: 5vh;
     width: 20vw;
     background-color: red;
     margin-top: 4vh;
     align-items: center;
     justify-content: center;
-    
 }
 
-#error_message p{
+#error_message.show {
+    display: flex;
+}
+
+#error_message p {
     margin-top: 3px;
     margin-left: 3vw;
     text-align: center;
-    color : var(--white1);
+    color: var(--white1);
     font-weight: lighter;
 }
 
-#error_message{
-    position: relative;
-}
 #error_message i {
     position: absolute;
     margin-left: 2vw;
     margin-top: 5px;
-    color:var(--white1);
+    color: var(--white1);
 }
+
 
 @keyframes moveImg {
     0% { 
@@ -218,104 +219,116 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 414px) {
-.login_container{
-    display: flex;
-    flex-direction: column;
-}
-.login_side_1{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:white;
-    padding-left: 3vw;
-    padding-right: 3vw;
-}
-.login_side_1 h1{
-    margin-top: 5vh;
-    font-size: 2rem;
-    margin-bottom: 2vh;
-    color:var(--black);
+    .login_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .login_side_1{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:white;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .login_side_1 h1{
+        margin-top: 5vh;
+        font-size: 2rem;
+        margin-bottom: 2vh;
+        color:var(--black);
+        
+    }
+    .login_side_1 p{
+        font-size: 0.83rem;
+        margin-bottom: 4vh;
+     }
     
-}
-.login_side_1 p{
-    font-size: 0.83rem;
-    margin-bottom: 4vh;
- }
+    .login_side_2{
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: var(--primary-color);
+    }
+    
+    .input_case input {
+        text-indent: 11vw; /*starts writting at the begining of placeholder*/
+        padding-left: 0;
+        font-size: 1.03rem;
+    }
+    .input_case input::placeholder {
+        text-indent: 11vw; 
+        font-size: 0.95rem;
+    }
+    .input_case input[type = "password"] {
+        font-size: 1.35rem;
+    }
+    form div i {
+        position: absolute;
+        font-size: 1.45rem;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 90vw;
+        height: 5vh;
+        margin-bottom: 4vh; 
+        outline: none;
+    }
+    
+    input[type="submit"] {
+        width: 30vw; 
+        padding: 8px; 
+    }
+    
+    .img_side_2{
+        position: absolute;
+        background: url('../img/loginBackgroud.png');
+        object-fit: cover;
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+    }
+    .img1_side_2{
+        position: absolute;
+        width: 100%;
+        height: 44%;
+        top: 10vh;
+        left: 0;
+        background: url('../img/loginImage.png');
+        background-size: cover;
+        background-position: center;
+        animation: moveImg 2s infinite ease-out;
+    }
+    .img2_side_2 {
+        position: absolute;
+        object-fit: cover;
+        width: 44%;
+        height: 19%;
+        top: 0;
+        left: 30vw;
+        background: url('../img/plane.png');
+        background-size: cover;
+        background-position: center;
+        animation: scaleImg 4s infinite linear;
+    
 
-.login_side_2{
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-color: var(--primary-color);
 }
 
-.input_case input {
-    text-indent: 11vw; /*starts writting at the begining of placeholder*/
-    padding-left: 0;
-    font-size: 1.03rem;
-}
-.input_case input::placeholder {
-    text-indent: 11vw; 
-    font-size: 0.95rem;
-}
-.input_case input[type = "password"] {
-    font-size: 1.35rem;
-}
-form div i {
-    position: absolute;
-    font-size: 1.45rem;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-input[type="text"],
-input[type="password"] {
-    width: 90vw;
-    height: 5vh;
-    margin-bottom: 4vh; 
-    outline: none;
-}
 
-input[type="submit"] {
-    width: 30vw; 
-    padding: 8px; 
-}
 
-.img_side_2{
-    position: absolute;
-    background: url('../img/loginBackgroud.png');
-    object-fit: cover;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-}
-.img1_side_2{
-    position: absolute;
-    width: 100%;
-    height: 44%;
-    top: 10vh;
-    left: 0;
-    background: url('../img/loginImage.png');
-    background-size: cover;
-    background-position: center;
-    animation: moveImg 2s infinite ease-out;
-}
-.img2_side_2 {
-    position: absolute;
-    object-fit: cover;
-    width: 44%;
-    height: 19%;
-    top: 0;
-    left: 30vw;
-    background: url('../img/plane.png');
-    background-size: cover;
-    background-position: center;
-    animation: scaleImg 4s infinite linear;
-}
+
+
+
+
+
+
+
 
 @keyframes scaleImg {
     0% {

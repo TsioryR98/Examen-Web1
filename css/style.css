@@ -1390,4 +1390,177 @@ footer {
       .price h4 {
         font-size: 1.45rem;
       }
+
+      .reservation_container {
+        height: auto;
+        flex-direction: column-reverse;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        }
+        
+        .reservation_form {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 12px 12px ;
+        padding: 1.5rem;
+        }
+        
+        .reservation-title {
+        font-size: 1.8rem;
+        }
+        
+        .reservation-description,
+        .reservation-description0 {
+        font-size: 0.95rem;
+        }
+        
+        .form_row {
+        flex-direction: column;
+        margin-bottom: 0.85rem;
+        }
+        
+        .form_information {
+        flex-basis: auto;
+        margin-bottom: 1rem;
+        }
+        
+        .form_input {
+        width: 100%;
+        }
+        
+        .reservation_img {
+        width: 100%;
+        height: 50vh;
+        border-radius: 12px 12px 0 0 ;
+        }
+        
+        .reservation_img .image {
+        background-position: center;
+        }
+        
+        .form input[type="submit"] {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        }
+
+
+        
+        .hotel_page {
+            height: auto;
+            padding-bottom: 2vh;
+            justify-content: center;
+            padding:0 5vw;
+            }
+            
+            .hotel_description {
+            height: auto;
+            padding: 2vh 0;
+            }
+            
+            .hotel_description h1 {
+            font-size: 1.6rem;
+            line-height: normal;
+            }
+            
+            .hotel_description p {
+            font-size: 0.9rem;
+            line-height: normal;
+            }
+            
+            .hotel_image {
+            flex-direction: column;
+            height: auto;
+            gap: 1vh;
+            }
+            
+            .hotel_container_image1 {
+            width: 98%;
+            height:auto;
+            flex-direction: column;
+            gap: 1vh;
+            background-position: center;
+            }
+            
+            .hotel_image_1,
+            .hotel_image_2,
+            .hotel_image_3,
+            .hotel_image_4 {
+            height: 45vh;
+            
+            }
+            
+            .hotel_container_image2 {
+            width: 98%;
+            height: 35vh;
+            background-position: center;
+            }
+
+
+            footer {
+                margin-top: 3vh;
+                height: auto;
+                
+                }
+                
+                .footer_contact {
+                flex-direction: column;
+                height: auto;
+                gap: 1rem;
+                padding: 0 1rem;
+                padding-bottom: 2vh;
+                }
+                
+                .footer_text1,
+                .footer_text2,
+                .footer_text3 {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                margin-bottom: 0.5rem;
+                }
+                
+                .footer_text1_description2 {
+                text-align: left;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                }
+                
+                .footer_text1_description1 {
+                justify-content: center;
+                }
+                
+                .footer_text1_description3 {
+                justify-content: center;
+                }
+                
+                .footer_text2,
+                .footer_text3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                }
+                
+                .footer_submit {
+                width: 100%;
+                }
+                
+                .newsletter_input {
+                width: 100%;
+                height: 5vh;
+                }
+                
+                .newsletter_button {
+                width: 60%;
+                height: 5vh;
+                }
+                
+                .footer_cooperate {
+                height: 3.5vh;
+                }
+                
+                .footer_cooperate p {
+                font-size: 0.8rem;
+                }
 }
