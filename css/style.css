@@ -106,6 +106,7 @@ nav input[type="submit"] {
     display: flex;
     justify-content: center; 
     margin-left: 20vw;
+    display: flex;
     
 }
 
@@ -991,55 +992,75 @@ footer {
         margin: 0;
         background-color: var(--tertiary-color);
     }
-    
-    nav span{
-        font-weight: bold; 
+
+    nav span {
+        font-weight: bold;
         color: var(--primary-color);
         font-size: 1.65rem
     }
-    
-    nav img{
+
+    nav img {
         width: 60px;
         height: 60px;
         margin-left: 2vw;
-    
-    }
-
-    .menu-icon {
-        display: flex;
-        align-items: center;
     }
 
     .visible-menu {
         display: none;
     }
- 
 
     nav input[type="submit"] {
-        width: 8vw; 
-        padding: 8px; 
-        border: none;
-        background-color: var(--primary-color);
-        outline: none;
-        color: white;
-        font-weight: lighter;
-        font-size: 0.95rem;
-        border-radius: 4px;
-        align-items: center;
         display: flex;
-        justify-content: center; 
-        margin-left: 20vw;
-        
+        width: 15vw; 
+        padding: 8px; 
+
     }
-    
-    nav input[type="submit"] {
-        opacity: 1;
-        transition: opacity 0.1s;
+
+    .menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
-    
-    nav input[type="submit"]:hover {
-        opacity: 0.7; 
+    .menu-icon i{
+        font-size: 1.5rem;
+       
+
     }
+
+
+    .visible-menu {
+        position: absolute;
+        top: 12vh; 
+        left: 0;
+        width: 100%;
+        background-color: var(--tertiary-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+      }
+      
+      .visible-menu.show {
+        max-height: 500px; 
+        transition: max-height 0.5s ease-in;
+      }
+      
+      .visible-menu li {
+        margin-bottom: 10px;
+      }
+      
+      .visible-menu li a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+
+
+
     
     .landing_page_1{
         display: flex;
@@ -1169,7 +1190,6 @@ footer {
         display: flex;
         align-items: center;
         z-index: 3;
-        background-color: red;
         border: var(--white1) solid 2px;
         display: flex;
         position: absolute;
@@ -1190,6 +1210,7 @@ footer {
     .recommand_page {
         display: flex;
         flex-direction: column;
+        width: 100%;
       }
     
       .recommand_img {
@@ -1451,28 +1472,28 @@ footer {
             padding-bottom: 2vh;
             justify-content: center;
             padding:0 5vw;
-            }
+        }
             
-            .hotel_description {
+        .hotel_description {
             height: auto;
             padding: 2vh 0;
-            }
+        }
             
-            .hotel_description h1 {
+        .hotel_description h1 {
             font-size: 1.6rem;
             line-height: normal;
-            }
+        }
             
-            .hotel_description p {
+        .hotel_description p {
             font-size: 0.9rem;
             line-height: normal;
-            }
+        }
             
-            .hotel_image {
+        .hotel_image {
             flex-direction: column;
             height: auto;
             gap: 1vh;
-            }
+        }
             
             .hotel_container_image1 {
             width: 98%;
@@ -1497,70 +1518,84 @@ footer {
             }
 
 
-            footer {
+         footer {
                 margin-top: 3vh;
                 height: auto;
                 
-                }
+        }
                 
-                .footer_contact {
+        .footer_contact {
                 flex-direction: column;
                 height: auto;
                 gap: 1rem;
                 padding: 0 1rem;
                 padding-bottom: 2vh;
-                }
+        }
                 
-                .footer_text1,
-                .footer_text2,
-                .footer_text3 {
+        .footer_text1,
+        .footer_text2,
+        .footer_text3 {
                 width: 100%;
                 height: auto;
                 text-align: center;
                 margin-bottom: 0.5rem;
-                }
+        }
                 
-                .footer_text1_description2 {
+        .footer_text1_description2 {
                 text-align: left;
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
-                }
+        }
                 
-                .footer_text1_description1 {
+        .footer_text1_description1 {
                 justify-content: center;
-                }
+        }
                 
-                .footer_text1_description3 {
+        .footer_text1_description3 {
                 justify-content: center;
-                }
+        }
                 
-                .footer_text2,
-                .footer_text3 {
+        .footer_text2,
+        .footer_text3 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 0;
-                }
+        }
                 
-                .footer_submit {
+        .footer_submit {
                 width: 100%;
-                }
+        }
                 
-                .newsletter_input {
+            .newsletter_input {
                 width: 100%;
                 height: 5vh;
-                }
+        }
                 
-                .newsletter_button {
+            .newsletter_button {
                 width: 60%;
                 height: 5vh;
-                }
+        }
                 
-                .footer_cooperate {
+        .footer_cooperate {
                 height: 3.5vh;
-                }
+        }
                 
-                .footer_cooperate p {
+        .footer_cooperate p {
                 font-size: 0.8rem;
-                }
+        }
 }
+
+/*------------------ JS for dynamic page --------------------*/
+
+.recommand_page {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.4s, transform 0.4s ease-out;
+  }
+  
+  .recommand_page.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+

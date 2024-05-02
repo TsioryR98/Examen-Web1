@@ -8,12 +8,12 @@ window.addEventListener("DOMContentLoaded", function(){
     
     valide.addEventListener('click', (e) => {
         if (email.value != _login1 || passwords.value != _login2) {
-            error.classList.add("show");
+            error.classList.toggle("show");
             setTimeout(() => {
-                error.classList.remove("show");
-            }, 5000);
+                error.classList.toggle("show");
+            }, 17000);
         } else {
             window.location.href = "index.html";
         }
-    });    
+    });   
 });

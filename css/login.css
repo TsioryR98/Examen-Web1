@@ -143,18 +143,18 @@ input[type="submit"] {
     height: 5vh;
     width: 20vw;
     background-color: red;
-    margin-top: 4vh;
+    margin-top: 5vh;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 #error_message.show {
-    display: flex;
+    display: flex; 
 }
 
 #error_message p {
-    margin-top: 3px;
-    margin-left: 3vw;
+    margin-top: 4vh;
+    margin-left: 5vw;
     text-align: center;
     color: var(--white1);
     font-weight: lighter;
@@ -162,11 +162,9 @@ input[type="submit"] {
 
 #error_message i {
     position: absolute;
-    margin-left: 2vw;
-    margin-top: 5px;
+    margin-left: 1vw;
     color: var(--white1);
 }
-
 
 @keyframes moveImg {
     0% { 
